@@ -1,0 +1,16 @@
+# Virtual environment folder
+.venv/
+
+# Environment file with secrets
+.env
+
+# SQLite database
+app.db
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logs, coverage reports, etc.
+*.log
+.coverage

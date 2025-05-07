@@ -1,9 +1,0 @@
-# Python virtual env
-.venv/
-
-# Env file with secrets
-.env
-
-# Byte-compiled / cache files
-__pycache__/
-*.py[cod]
