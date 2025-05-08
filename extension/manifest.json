@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Social-Pref Zalando Personalizer",
+  "version": "1.0",
+  "description": "Personalizes Zalando landing page based on your Pinterest likes.",
+  
+
+  "icons": {
+    "16": "icons/social_pref_logo.png",
+    "48": "icons/social_pref_logo.png",
+    "128": "icons/social_pref_logo.png"
+  },
+
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "https://www.zalando.de/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/social_pref_logo.png",
+      "48": "icons/social_pref_logo.png",
+      "128": "icons/social_pref_logo.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.zalando.de/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
